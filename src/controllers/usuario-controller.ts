@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { UsuarioModel } from "../models/usuario-model";
 
-class UserController {
+class UsuarioController {
   async findAll(req: Request, res: Response) {
     let usuarios = await UsuarioModel.findAll();
     return usuarios.length > 0
@@ -39,4 +39,4 @@ class UserController {
   }
 }
 
-export default new UserController();
+export default new UsuarioController();

@@ -1,16 +1,16 @@
 import express from "express";
 import usuarioController from "../controllers/usuario-controller";
 
-const router = express.Router();
+const UsuarioRouter = express.Router();
 
-router.get("/usuarios", usuarioController.findAll);
+UsuarioRouter.get("/usuarios", usuarioController.findAll);
 
-router.get("/usuarios/:id", usuarioController.findOne);
+UsuarioRouter.get("/usuarios/:id", usuarioController.findOne);
 
-router.post("/usuarios", usuarioController.create);
+UsuarioRouter.post("/usuarios", usuarioController.create);
 
-router.put("/usuarios/:id", usuarioController.update);
+UsuarioRouter.put("/usuarios/:id", usuarioController.update);
 
-router.delete("/usuarios/:id", usuarioController.destroy);
+UsuarioRouter.delete("/usuarios/:id", usuarioController.destroy);
 
-export { router };
+export { UsuarioRouter };

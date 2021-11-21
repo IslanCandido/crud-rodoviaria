@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../connections/connection";
+import { PessoaModel } from "./pessoa-model";
 
 export const UsuarioModel = sequelize.define("usuario", {
   id: {
@@ -15,5 +16,10 @@ export const UsuarioModel = sequelize.define("usuario", {
   descSenha: {
     type: DataTypes.STRING,
     allowNull: false,
-  }
+  },
+});
+
+UsuarioModel.belongsTo(PessoaModel, {
+  constraints: true,
+  foreignKey: "idPessoa",
 });
