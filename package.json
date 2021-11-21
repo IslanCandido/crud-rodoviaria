@@ -8,6 +8,10 @@
     "build": "tsc",
     "start": "node ./dist/server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IslanCandido/crud-rodoviaria.git"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
